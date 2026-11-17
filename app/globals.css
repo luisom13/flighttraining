@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Paleta tomada de las piezas de Flight Training (naranja de marca + negro del logo). */
+@theme inline {
+  --color-marca: #ec6a2c;
+  --color-marca-fuerte: #c9501a;
+  --color-marca-suave: #fdeee5;
+  --color-tinta: #121212;
+  --color-hangar: #f3f4f2;
+  --color-acero: #d9dcd8;
+  --color-plomo: #5d625e;
+  --color-cielo: #1f5fa8;
+  --color-cielo-suave: #e6eff9;
+  --color-ok: #1e8a4c;
+  --color-ok-suave: #e4f4ea;
+  --color-alerta: #b7791f;
+  --color-alerta-suave: #fbf1d9;
+  --color-critico: #c0392b;
+  --color-critico-suave: #fbe6e3;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-tinta);
+  font-family: var(--font-archivo), system-ui, sans-serif;
+}
+
+/* Titulares: Archivo en su ancho expandido, como los rótulos de fuselaje. */
+.rotulo {
+  font-stretch: 122%;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.matricula {
+  font-stretch: 118%;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.cifra {
+  font-variant-numeric: tabular-nums;
+}
+
+.rayado {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #2a2a2a 0 6px,
+    #3a3a3a 6px 12px
+  );
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-marca);
+  outline-offset: 2px;
+}
+
+@keyframes entrar {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: none;
+  }
+}
+.entrar {
+  animation: entrar 0.25s ease-out both;
+}
+
+@keyframes destello {
+  0% {
+    box-shadow: 0 0 0 0 rgba(236, 106, 44, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(236, 106, 44, 0);
+  }
+}
+.destello {
+  animation: destello 1.2s ease-out 3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entrar,
+  .destello {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
