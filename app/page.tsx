@@ -15,15 +15,15 @@ import {
   Plane,
   ShieldCheck,
 } from "lucide-react";
-import { ESCUELA, PROGRAMAS } from "@/lib/data";
+import { BASE, ESCUELA, PROGRAMAS } from "@/lib/data";
 import { useDemo } from "@/lib/store";
 
 const WA = (texto: string) => `https://wa.me/${ESCUELA.whatsapp}?text=${encodeURIComponent(texto)}`;
 
 function Egresados() {
   const fotos = [
-    { src: "/img/egresados-avianca.jpg", alt: "Tres egresados de Flight Training con uniforme de piloto sostienen sus diplomas junto a un banner de Avianca", pie: "Egresados recibiendo su diploma en Avianca", pos: "object-[center_60%]" },
-    { src: "/img/egresados-pilotos.jpg", alt: "Cuatro egresados de Flight Training con uniforme de piloto de aerolínea, con San Salvador de fondo", pie: "De la plataforma de Ilopango a la cabina de una aerolínea", pos: "object-center" },
+    { src: `${BASE}/img/egresados-avianca.jpg`, alt: "Tres egresados de Flight Training con uniforme de piloto sostienen sus diplomas junto a un banner de Avianca", pie: "Egresados recibiendo su diploma en Avianca", pos: "object-[center_60%]" },
+    { src: `${BASE}/img/egresados-pilotos.jpg`, alt: "Cuatro egresados de Flight Training con uniforme de piloto de aerolínea, con San Salvador de fondo", pie: "De la plataforma de Ilopango a la cabina de una aerolínea", pos: "object-center" },
   ];
   return (
     <section id="egresados" className="scroll-mt-14 mx-auto max-w-7xl px-4 pt-20 sm:px-6">
@@ -45,7 +45,7 @@ function Egresados() {
         ))}
         <figure className="relative overflow-hidden rounded-2xl bg-hangar sm:col-span-2">
           <Image
-            src="/img/graduacion.jpg"
+            src={`${BASE}/img/graduacion.jpg`}
             alt="Grupo de alumnos de Flight Training celebra con sus certificados frente al Piper Seneca de la escuela"
             width={1600}
             height={900}
@@ -141,15 +141,15 @@ function Programas() {
 
 function Flota() {
   const flota = [
-    { foto: "/img/cessna.jpg", alt: "Cessna rojo y plateado de Flight Training frente al hangar", modelo: "Cessna", uso: "Instrucción primaria", texto: "Ala alta, noble y estable. Donde casi todos hacen su primer vuelo solo.", pos: "object-center" },
-    { foto: "/img/piper-warrior.jpg", alt: "Piper Warrior rojo de Flight Training en la plataforma de Ilopango", modelo: "Piper PA-28 Warrior y Archer", uso: "Instrucción y travesías", texto: "Cuatro Piper en línea: YS-151, YS-157, YS-158 y YS-159. Potencia justa para una formación segura.", pos: "object-center" },
-    { foto: "/img/pa34-seneca.jpg", alt: "Piper PA-34 Seneca II bimotor de Flight Training frente al hangar", modelo: "Piper PA-34 Seneca II", uso: "Habilitación multimotor", texto: "Bimotor de 2 × 200 hp para el entrenamiento avanzado y el curso multimotor.", pos: "object-center" },
-    { foto: "/img/simulador-redbird.jpg", alt: "Alumno practicando en el simulador Redbird de Flight Training", modelo: "Simulador Redbird LD", uso: "Procedimientos e instrumentos", texto: "Cabina envolvente para practicar navegación y toma de decisiones antes de llevarlas al avión.", pos: "object-[center_35%]" },
+    { foto: `${BASE}/img/cessna.jpg`, alt: "Cessna rojo y plateado de Flight Training frente al hangar", modelo: "Cessna", uso: "Instrucción primaria", texto: "Ala alta, noble y estable. Donde casi todos hacen su primer vuelo solo.", pos: "object-center" },
+    { foto: `${BASE}/img/piper-warrior.jpg`, alt: "Piper Warrior rojo de Flight Training en la plataforma de Ilopango", modelo: "Piper PA-28 Warrior y Archer", uso: "Instrucción y travesías", texto: "Cuatro Piper en línea: YS-151, YS-157, YS-158 y YS-159. Potencia justa para una formación segura.", pos: "object-center" },
+    { foto: `${BASE}/img/pa34-seneca.jpg`, alt: "Piper PA-34 Seneca II bimotor de Flight Training frente al hangar", modelo: "Piper PA-34 Seneca II", uso: "Habilitación multimotor", texto: "Bimotor de 2 × 200 hp para el entrenamiento avanzado y el curso multimotor.", pos: "object-center" },
+    { foto: `${BASE}/img/simulador-redbird.jpg`, alt: "Alumno practicando en el simulador Redbird de Flight Training", modelo: "Simulador Redbird LD", uso: "Procedimientos e instrumentos", texto: "Cabina envolvente para practicar navegación y toma de decisiones antes de llevarlas al avión.", pos: "object-[center_35%]" },
   ];
   const instalaciones = [
-    { foto: "/img/escuela.jpg", alt: "Fachada del edificio de Flight Training en el Aeropuerto de Ilopango", t: "Sede en el Hangar B-15", d: "Edificio propio dentro del Aeropuerto Internacional de Ilopango, con salida directa a la plataforma.", pos: "object-center" },
-    { foto: "/img/aulas.jpg", alt: "Instructora explicando instrumentos de vuelo a un grupo de alumnos en el aula", t: "Aulas de teoría", d: "Grupos reducidos con instructores que vuelan todos los días.", pos: "object-[center_40%]" },
-    { foto: "/img/equipo.jpg", alt: "Equipo de instructores y alumnos de Flight Training en el lobby de la escuela", t: "Lobby y cabina de práctica", d: "El punto de encuentro antes de cada vuelo, con maqueta de cabina para tripulantes y counter.", pos: "object-[center_58%]" },
+    { foto: `${BASE}/img/escuela.jpg`, alt: "Fachada del edificio de Flight Training en el Aeropuerto de Ilopango", t: "Sede en el Hangar B-15", d: "Edificio propio dentro del Aeropuerto Internacional de Ilopango, con salida directa a la plataforma.", pos: "object-center" },
+    { foto: `${BASE}/img/aulas.jpg`, alt: "Instructora explicando instrumentos de vuelo a un grupo de alumnos en el aula", t: "Aulas de teoría", d: "Grupos reducidos con instructores que vuelan todos los días.", pos: "object-[center_40%]" },
+    { foto: `${BASE}/img/equipo.jpg`, alt: "Equipo de instructores y alumnos de Flight Training en el lobby de la escuela", t: "Lobby y cabina de práctica", d: "El punto de encuentro antes de cada vuelo, con maqueta de cabina para tripulantes y counter.", pos: "object-[center_58%]" },
   ];
   return (
     <section id="flota" className="scroll-mt-14 bg-tinta text-white">
@@ -325,7 +325,7 @@ export default function SitioPublico() {
             </div>
           </div>
           <Image
-            src="/img/hero.jpg"
+            src={`${BASE}/img/hero.jpg`}
             alt="Piloto egresado de Flight Training frente a una aeronave de la escuela en Ilopango"
             width={1200}
             height={1406}
@@ -349,7 +349,7 @@ export default function SitioPublico() {
 
       <footer className="border-t border-acero">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-8 text-sm text-plomo sm:px-6">
-          <Image src="/img/logo-ft.png" alt="Flight Training" width={600} height={318} className="h-14 w-auto" />
+          <Image src={`${BASE}/img/logo-ft.png`} alt="Flight Training" width={600} height={318} className="h-14 w-auto" />
           <p>
             {ESCUELA.ubicacion}, El Salvador. Instagram {ESCUELA.instagram}
           </p>

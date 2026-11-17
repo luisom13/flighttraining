@@ -13,6 +13,7 @@ const archivo = Archivo({
 // En producción, definir NEXT_PUBLIC_SITE_URL con el dominio final (ej. https://flighttraining.com.sv)
 // para que las imágenes Open Graph se publiquen con URL absoluta.
 const SITIO = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const DESCRIPCION =
   "Escuela de aviación en el Aeropuerto Internacional de Ilopango. Piloto privado y comercial, instrumentos, multimotor, tripulante de cabina y agente de counter, con flota propia y simulador Redbird.";
 
@@ -35,11 +36,11 @@ export const metadata: Metadata = {
     "MSSS",
     "Flight Training",
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: `${BASE}/` },
   openGraph: {
     type: "website",
     locale: "es_SV",
-    url: "/",
+    url: `${BASE}/`,
     siteName: "Flight Training",
     title: "Tu carrera en la aviación comienza en El Salvador",
     description: DESCRIPCION,

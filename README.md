@@ -28,6 +28,9 @@ El botón circular de la derecha reinicia la demo a su estado original.
 
 ## Desplegar
 
-Funciona tal cual en Vercel: importar el repositorio y agregar la variable `NEXT_PUBLIC_SITE_URL` con la URL pública.
+**GitHub Pages**: cada push a `main` ejecuta `.github/workflows/pages.yml`, que genera el sitio estático y lo publica en
+https://luisom13.github.io/flighttraining/. En Settings › Pages, la fuente (Source) debe ser **GitHub Actions**.
+
+**Vercel**: importar el repositorio y agregar la variable `NEXT_PUBLIC_SITE_URL` con la URL pública.
 
 El material original de la escuela (carpeta `_referencias/`) no se incluye en el repositorio.

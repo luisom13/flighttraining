@@ -471,3 +471,6 @@ export const PROGRAMAS = [
     contenido: ["Check-in en mostrador y sistemas de reservación", "Proceso de abordaje y anfitrión de lobby", "Arribo y manejo de equipaje", "Legislación aeronáutica y terminología de viaje"],
   },
 ];
+
+// Prefijo de ruta cuando el sitio se publica en una subcarpeta (GitHub Pages: /flighttraining).
+export const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

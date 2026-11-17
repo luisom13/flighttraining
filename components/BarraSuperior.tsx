@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CheckCircle2, Globe, GraduationCap, RadioTower, RotateCcw } from "lucide-react";
+import { BASE } from "@/lib/data";
 import { useDemo } from "@/lib/store";
 
 // Emblema oficial (recortado de _referencias/Logo FT.jpg, sin fondo).
@@ -12,7 +13,7 @@ export function Logo({ claro = false }: { claro?: boolean }) {
   return (
     <span className="flex items-center gap-2.5">
       <Image
-        src={claro ? "/img/logo-emblema-claro.png" : "/img/logo-emblema.png"}
+        src={claro ? `${BASE}/img/logo-emblema-claro.png` : `${BASE}/img/logo-emblema.png`}
         alt=""
         width={400}
         height={155}
